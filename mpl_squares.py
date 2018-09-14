@@ -7,7 +7,8 @@ import matplotlib.pyplot as plt
 
 def main():
     squares = [x*x for x in range(6)]
-    plt.plot(squares, linewidth=5)
+    input_values = [x for x in range(6)]
+    plt.plot(input_values, squares, linewidth=5)
 
     # Set chart title and label axes.
     plt.title('Square Numbers', fontsize=24)
