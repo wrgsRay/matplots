@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 def main():
-    squares = [1, 4, 9, 16, 35]
+    squares = [x*x for x in range(6)]
     plt.plot(squares, linewidth=5)
 
     # Set chart title and label axes.
