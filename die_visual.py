@@ -10,11 +10,17 @@ def main():
     die = Die()
     # Make some rolls, and store results in a list
     results = list()
-    for roll_num in range(100):
+    for roll_num in range(1000):
         result = die.roll()
         results.append(result)
 
-    print(results)
+    # Analyze the results
+    frequencies = list()
+    for value in range(1, die.num_sides + 1):
+        frequency = results.count(value)
+        frequencies.append(frequency)
+
+    print(frequencies)
 
 
 if __name__ == '__main__':
