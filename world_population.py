@@ -2,6 +2,7 @@
 Python 3.6
 @Author: wrgsRay
 """
+from countries import get_country_code
 import json
 
 
@@ -15,7 +16,11 @@ def main():
         if pop_dict['Year'] == '2010':
             country_name = pop_dict['Country Name']
             population = int(float(pop_dict['Value']))
-            print(f'{country_name} : {population}')
+            code = get_country_code(country_name)
+            if code:
+                print(f'{code } : {population}')
+            else:
+                print(f'ERROR - {country_name}')
 
 
 if __name__ == '__main__':
